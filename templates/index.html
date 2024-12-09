@@ -1,0 +1,349 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--первый блок-->
+<header class="masthead" id="page-top">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <h1 class="display-1 lh-1 mb-3">Надёжный и безопасный VPN.</h1>
+                    <p class="lead fw-normal text-muted mb-5">Самый современный VPN бесплатно!</p>
+
+                    <a href="https://t.me/cazavpnbot"
+                       class="btn btn-secondary rounded-pill px-3 mb-2 mb-lg-0 bg-gradient-primary-to-secondary">
+                        <span class="d-flex align-items-center">
+                            <span class="small">Установить</span></span></a>
+
+{#                    <p class="lead fw-normal text-muted mb-5 my-2">Попробовать бесплатно в течение 7 дней без ввода#}
+{#                        данных#}
+{#                        карты.</p>#}
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- Masthead device mockup feature-->
+                <div class="masthead-device-mockup">
+                    <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                <stop class="gradient-start-color" offset="0%"></stop>
+                                <stop class="gradient-end-color" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg
+                    >
+                    <svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03"
+                              transform="translate(120.42 -49.88) rotate(45)"></rect>
+                        <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03"
+                              transform="translate(-49.88 120.42) rotate(-45)"></rect>
+                    </svg
+                    >
+                    <svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <div class="device-wrapper">
+                        <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                            <div class="screen bg-black">
+                                <!-- PUT CONTENTS HERE:-->
+                                <!-- * * This can be a video, image, or just about anything else.-->
+                                <!-- * * Set the max width of your media to 100% and the height to-->
+                                <!-- * * 100% like the demo example below.-->
+                                <img src="../static/screen.jpg" style="max-width: 100%; height: 100%">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Quote/testimonial aside-->
+<aside class="text-center bg-gradient-primary-to-secondary">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-xl-8">
+                <div class="h2 fs-1 text-white mb-4">Caz VPN обеспечивает шифрование вашего интернет-трафика,
+                    перенаправляя его через защищенный
+                    VPN-туннель. Это
+                    гарантирует, что ни сайты, ни киберпреступники, ни провайдеры — не
+                    смогут отследить ваши действия в интернете.
+
+                </div>
+            </div>
+        </div>
+</aside>
+<!-- Преимущества-->
+<section id="features">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                <div class="container-fluid px-5">
+                    <div class="row gx-5">
+                        <div class="col-md-6 mb-5">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-2-circle icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Простая установка за 2 быстрых шага</h3>
+                                <p class="text-muted mb-0">1. Получить ключ-подписку<br>
+                                    2. Установить приложение и добавить ключ всего за два клика!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Поддержка всех устройств</h3>
+                                <p class="text-muted mb-0">iOs, Android, MacOs, Windows</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-5 mb-md-0">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Реферальная система</h3>
+                                <p class="text-muted mb-0">Приглашайте друзей и получайте дополнительный трафик!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Безопасность</h3>
+                                <p class="text-muted mb-0">Современный протокол позволяет защитить свои данные и
+                                    работает даже в Китае!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-lg-0">
+                <!-- Features section device mockup-->
+                <div class="features-device-mockup">
+                    <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                <stop class="gradient-start-color" offset="0%"></stop>
+                                <stop class="gradient-end-color" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg
+                    >
+                    <svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03"
+                              transform="translate(120.42 -49.88) rotate(45)"></rect>
+                        <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03"
+                              transform="translate(-49.88 120.42) rotate(-45)"></rect>
+                    </svg
+                    >
+                    <svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <div class="device-wrapper">
+                        <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                            <div class="screen bg-black">
+                                <img src="../static/screen2.jpg" style="max-width: 100%; height: 100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ЧАВО-->
+<section class="bg-light" id="faq">
+    <div class="container px-5">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            При использовании VPN не работают российские сервисы
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                            Некоторые сервисы блокируют доступ при доступе с зарубежных IP адресов, поэтому такие
+                            сервисы, как 'Госуслуги', 'Кинопоиск', некоторые банковские приложения и другие, могут не
+                            открываться с включенным VPN.<br>В разделе инструкций можно посмотреть, как включить роутинг
+                            для решения данной проблемы.<br>Стоит обратить внимание, что данное решение подходит не
+                            всем, поэтому по-умолчанию оно отключено.
+                        </div>
+                    </div>
+                </div>
+{#                <div class="accordion-item">#}
+{#                    <h2 class="accordion-header" id="headingTwo">#}
+{#                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"#}
+{#                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">#}
+{#                            Привязывается ли карта для оплаты подписки?#}
+{#                        </button>#}
+{#                    </h2>#}
+{#                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"#}
+{#                         data-bs-parent="#accordionExample">#}
+{#                        <div class="accordion-body">#}
+{#                            <strong>Автоматических списаний с карт нет!</strong> Вы оплачиваете сервис только на#}
+{#                            необходимый период, после окончания действия подписки, её необходимо продлить вручную.#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Какая скорость VPN?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Все серверы имеют пропускную способность до 10 Gbs. Скорость соединения зависит от многих
+                            факторов, но в первую очередь ограничена скоростью вашего интернет-соединения.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Не подключается, что-то не работает?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Большниство проблем, которые могут возникнуть с подключением и настрйокой различных
+                            устройств разобранны в разделе помощь, но если ничего не получается или просто лень читать –
+                            пишите в поддержку!
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Есть ли ограничения по скорости/трафику/количеству устройств?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                В базовой версии – 10 Гб трафика в месяц, количество устройств и скорость не ограничены!
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--цены-->
+<style>
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+    }
+</style>
+{#<section class="cta" id="price">#}
+{#    <div class="cta-content">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <h1 class="text-center my-5">Тарифы Caz VPN</h1>#}
+{#                <div class="col-md-3">#}
+{#                    <div class="card">#}
+{#                        <div class="card-header">#}
+{#                            <h3>1 месяц</h3>#}
+{#                        </div>#}
+{#                        <div class="card-body">#}
+{#                            <h2 class="card-title text-gradient ">120 ₽</h2>#}
+{#                            <p class="card-text">120 ₽ /мес.</p>#}
+{#                            <hr>#}
+{##}
+{#                            <p class="card-text">#}
+{#                                Без ограничений скорости и трафика</p>#}
+{#                            <hr>#}
+{#                            <p class="card-text">#}
+{#                                Без автоматического продления</p>#}
+{#                            <a href="https://t.me/cazav_bot" class="btn btn-outline-primary py-3 px-4 rounded-pill">Выбрать</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                    <div class="card">#}
+{#                        <div class="card-header">#}
+{#                            <h3>3 месяца</h3>#}
+{#                        </div>#}
+{#                        <div class="card-body">#}
+{#                            <h2 class="card-title text-gradient">300 ₽</h2>#}
+{#                            <p class="card-text ">100 ₽ /мес.</p>#}
+{#                            <hr>#}
+{##}
+{#                            <p class="card-text">#}
+{#                                Без ограничений скорости и трафика</p>#}
+{#                            <hr>#}
+{#                            <p class="card-text">#}
+{#                                Без автоматического продления</p>#}
+{#                            <a href="https://t.me/cazav_bot" class="btn btn-outline-primary py-3 px-4 rounded-pill">Выбрать</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                    <div class="card">#}
+{#                        <div class="card-header">#}
+{#                            <h3>6 месяцев</h3>#}
+{#                        </div>#}
+{#                        <div class="card-body">#}
+{##}
+{#                            <h2 class="card-title text-gradient">550 ₽</h2>#}
+{#                            <p class="card-text">92 ₽/мес.</p>#}
+{#                            <hr>#}
+{##}
+{#                            <p class="card-text">#}
+{#                                Без ограничений скорости и трафика</p>#}
+{#                            <hr>#}
+{#                            <p class="card-text">#}
+{#                                Без автоматического продления</p>#}
+{#                            <a href="https://t.me/cazav_bot" class="btn btn-outline-primary py-3 px-4 rounded-pill">Выбрать</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                    <div class="card">#}
+{#                        <div class="card-header">#}
+{#                            <h3>1 год</h3>#}
+{#                        </div>#}
+{#                        <div class="card-body">#}
+{#                            <h2 class="card-title text-gradient">990 ₽</h2>#}
+{#                            <p class="card-text">83 ₽/мес.</p>#}
+{#                            <hr>#}
+{##}
+{#                            <p class="card-text">#}
+{#                                Без ограничений скорости и трафика</p>#}
+{#                            <hr>#}
+{#                            <p class="card-text">#}
+{#                                Без автоматического продления</p>#}
+{#                            <a href="https://t.me/cazav_bot" class="btn btn-outline-primary py-3 px-4 rounded-pill">Выбрать</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+
+{% endblock %}

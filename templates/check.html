@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Проверка пользователя Telegram</h1>
+    <p>Пожалуйста, используйте команду <code>/start</code> в вашем Telegram-боте, чтобы проверить информацию о себе.</p>
+    <div id="response">
+        {% if response %}
+            {{ response }}
+        {% else %}
+            <p>Информация о пользователе пока не доступна.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

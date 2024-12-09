@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="CazVPN предоставляет быстрый и безопасный VPN-сервис с поддержкой всех устройств. Защитите свои данные и анонимно серфите в интернете бесплатно!"/>
+    <meta name="author" content=""/>
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.png"/>
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../static/styles.css" rel="stylesheet"/>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(98863332, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/98863332" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    {% endblock %}
+</head>
+
+<body>
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+    <div class="container px-5">
+        <a class="navbar-brand fw-bold" href="/">Caz VPN</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Меню
+            <i class="bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <li class="nav-item"><a class="nav-link me-lg-3" href="/help">Инструкции</a></li>
+                <li class="nav-item"><a class="nav-link me-lg-3" href="/check">Мой IP</a></li>
+            </ul>
+            <a href="https://t.me/cazavpnbot"
+               class="btn btn-secondary rounded-pill px-3 mb-2 mb-lg-0 bg-gradient-primary-to-secondary">Установить</a>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+<!-- Nav footer section-->
+<section class="bg-gradient-primary-to-secondary" id="download">
+    <div class="row">
+        <div class="col-md-4 px-5">
+
+            <div class="col-md-4">
+                <h4 class="text-white">Caz VPN</h4>
+                <div class="row"><a href="/politika" class="text-white">Политика конфиденциальности</a></div>
+
+                <!--                <div class="row"> <a href="#" class="text-white">Правила использования</a></div>-->
+                <!--                <div class="row"><a href="#" class="text-white">Реферальная система</a></div>-->
+
+            </div>
+        </div>
+        <div class="col-md-4 px-5">
+            <div class="col-md-4">
+                <h4 class="text-white">Поддержка</h4>
+                <div class="row"><a href="/#faq" class="text-white">FAQ</a></div>
+                <div class="row"><a class="text-white" href="/help">Инструкции</a></div>
+                <div class="row"><a href="/check" class="text-white">Мой IP</a></div>
+                <div class="row"><a href="https://t.me/cazav_bot" class="text-white">Написать в поддержку</a></div>
+
+            </div>
+        </div>
+        <div class="col-md-4 px-5">
+            <div class="col-md-4">
+                <h5 class="text-white">Перейти в бот</h5>
+                <a href="https://t.me/cazavpnbot">
+                    <i class="bi-telegram icon-feature text-white d-block mb-3"></i>
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<!-- Footer-->
+<footer class="bg-black text-center py-5">
+    <div class="container px-5">
+        <div class="text-white-50 small">
+            <div class="mb-2">&copy; Caz VPN 2023.</div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
+
+{% block core %}
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../static/scripts.js"></script>
+
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+{% endblock %}
+
+</body>
+</html>
