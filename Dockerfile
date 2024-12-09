@@ -3,7 +3,7 @@ LABEL authors="sergejporohov"
 
 WORKDIR /app
 
-COPY main.py /app/main.py
+COPY app.py /app/app.py
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade setuptools
 RUN pip3 install -r requirements.txt
