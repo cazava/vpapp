@@ -2,8 +2,8 @@ from aiogram import Bot, Dispatcher, types
 import requests
 import asyncio
 
-API_TOKEN = '8070461641:AAHfwtiyvn7gmToWrf3A3WMMp5Ir7ZZ73EE'
-FLASK_URL = 'http://127.0.0.1:5000/check'  # Замените на URL вашего Flask-приложения, если необходимо
+API_TOKEN = ''
+FLASK_URL = 'http://app.cazav.ru/check'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
