@@ -1,0 +1,8 @@
+services:
+  vpapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - /root/vpapp:/app
