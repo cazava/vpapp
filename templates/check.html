@@ -1,35 +1,134 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Mini App</title>
+{% extends 'base.html' %}
+
+{% block content %}
+<header class="masthead" id="page-top">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <h3 class="display-5 lh-1 mb-3">Статус</h3>
+                </div>
+            </div>
+        </div>
+    </div>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            background-color: #f0f2f5;
         }
+
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .subscription-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
         h1 {
-            color: #333;
+            color: #343a40;
         }
-        #response {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+
+        .status {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .days-left {
+            font-size: 48px;
+            color: #28a745; /* Зеленый цвет для оставшихся дней */
+        }
+
+        .expiration-date {
+            font-size: 20px;
+            color: #dc3545; /* Красный цвет для даты окончания */
+        }
+
+        .badge {
+            font-size: 14px;
         }
     </style>
-</head>
-<body>
-    <h1>Проверка пользователя Telegram</h1>
-    <p>Пожалуйста, используйте команду <code>/start</code> в вашем Telegram-боте, чтобы проверить информацию о себе.</p>
-    <div id="response">
-        {% if response %}
-            {{ response }}
-        {% else %}
-            <p>Информация о пользователе пока не доступна.</p>
-        {% endif %}
+</header>
+
+<div class="container">
+    <div class="subscription-box">
+        <h1>Статус подписки</h1>
+        <p class="status">
+            <span class="badge badge-success">{{ status }}</span>
+        </p>
+        <p class="days-left">{{ days }} Дня(ей) до окончания</p>
+        <p class="expiration-date">Дата окончания: <strong>{{ date }}</strong></p>
     </div>
-</body>
-</html>
+</div>
+
+<div class="container">
+    <div class="row gx-5 align-items-center">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Скачать приложение
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Выберите устройство, которое подключаете и скачайте приложение
+                        <button type="button" class="btn btn-primary">iOs</button>
+                        <button type="button" class="btn btn-primary">Android</button>
+                        <button type="button" class="btn btn-primary">Windows</button>
+                        <button type="button" class="btn btn-primary">MacOs</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Добавить подписку в приложение
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <button type="button" class="btn btn-primary">Подключиться iOs</button>
+                        <button type="button" class="btn btn-primary">Android</button>
+                        <button type="button" class="btn btn-primary">Вручную</button>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Подключение
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Это тело аккордеона третьего элемента.</strong> По умолчанию оно скрыто, пока плагин
+                        свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого
+                        элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью
+                        переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши
+                        переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в
+                        <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+{% endblock %}

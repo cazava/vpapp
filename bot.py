@@ -1,27 +1,25 @@
 from aiogram import Bot, Dispatcher, types
 import requests
 import asyncio
+from aiogram.filters import Command
+from aiogram.types.web_app_info import WebAppInfo
 
-API_TOKEN = ''
-FLASK_URL = 'http://app.cazav.ru/check'
+BOT_TOKEN = '8070461641:AAHfwtiyvn7gmToWrf3A3WMMp5Ir7ZZ73EE'
+FLASK_URL = 'https://app.cazav.ru/'
 
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 
-@dp.message_handler(commands=['start'])
+@dp.message(Command('start'))
 async def send_welcome(message: types.Message):
     user_id = message.from_user.id
+    kb = [
+        [types.KeyboardButton(text='Hola', web_app=WebAppInfo(url=FLASK_URL))]
+    ]
+    kb = types.ReplyKeyboardMarkup(
+        keyboard=kb
+    )
+    await message.answer('Привет! Открой приложение!', reply_markup=kb)
 
-    # Отправляем POST-запрос к Flask-приложению
-    response = requests.post(FLASK_URL, json={'user_id': user_id})
-    response_data = response.json()
-
-    # Отправляем результат пользователю
-    await message.answer(response_data['response'])
-
-
-if __name__ == '__main__':
-    from aiogram import executor
-
-    asyncio.run(dp.start_polling())
+# asyncio.run(dp.start_polling(bot, skip_updates=False))
