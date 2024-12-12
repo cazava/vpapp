@@ -1,0 +1,254 @@
+{% extends 'base_app.html' %}
+
+{% block content %}
+<style>
+    .content {
+        padding: 20px;
+        display: none;
+    }
+
+    .active {
+        display: block;
+    }
+</style>
+
+
+<div class="container bg_app">
+    <!-- Контент приложения -->
+    <div id="connect" class="content active">
+
+        <h1>Caz VPN</h1>
+
+
+        <div class="row py-3">
+            <button class="btn-outline-primary rounded-pill shadow-lg w-100 py-3 border-0" style="background-color: #efeff2"><strong>{{ status }}</strong>
+            </button>
+            <p class="text-center">Статус подписки</p>
+        </div>
+
+        <div class="row py-3">
+            <button class="btn-outline-primary rounded-pill shadow-lg w-100 py-3 border-0" style="background-color: #efeff2"><strong>{{ days }}</strong>
+            </button>
+            <p class="text-center">Дней до окончания подписки</p>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="accordion" style="padding-bottom: 100px" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false"
+                                aria-controls="collapseOne">
+                            Скачать приложение
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="my-2">Выберите устройство, которое подключаете и скачайте приложение</p>
+
+                            <a href="" class="btn btn-primary rounded-pill w-100 my-1 shadow-lg">iOS
+                            </a>
+                            <a href="" class="btn btn-primary rounded-pill w-100 my-1 shadow-lg">Android
+                            </a>
+                            <a href="" class="btn btn-primary rounded-pill w-100 my-1 shadow-lg">Windows
+                            </a>
+                            <a href="" class="btn btn-primary rounded-pill w-100 my-1 shadow-lg">MacOS
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item ">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                            Добавить подписку в приложение
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse"
+                    >
+                        <div class="accordion-body">
+
+                            <a href="" class="btn btn-primary rounded-pill w-100 mb-2 shadow-lg">Подключиться iOs
+                            </a>
+                            <a href="" class="btn btn-primary rounded-pill w-100 mb-2 shadow-lg">Подключиться
+                                Android
+                            </a>
+                            <a href="" class="btn btn-primary rounded-pill w-100 mb-2 shadow-lg">Подключиться
+                                вручную
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                            Подключение
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body pb-5">
+                            <strong>Последнее действие – включить автоматическое обновление
+                                подписки</strong><br><br>
+                            ❗Если у вас iOs (Streisand) – необходимо в настройках приложения нажать кнопку
+                            "Подписка" и включить пункт "Обновить при открытии"<br><br>
+                            ❗️Если у вас Android (v2rayNG) – необходимо в приложении нажать кнопку "..." и "Обновить
+                            подписку".<br><br>
+                            После подключения в приложении можно выбирать сервер из доступных стран. Это не
+                            обязательно, но таким образом можно подобрать сервер с максимальной скоростью именно для
+                            вас!
+
+                            Если что-то не получается – в разделе помощь можно посмотреть подробные инструкции или
+                            написать в поддержку.
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--Раздел помощь -->
+    <div id="help" class="content">
+        <h1>Помощь</h1>
+        <p>Все подробные иструкции по подключению и решению наиболее распространённых проблем приведены на <a
+                href="https://cazvpn.online/help">сайте</a></p>
+        <div class="container-fluid">
+
+            <div class="accordion accordion-flush mb-lg-5" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                            Подключение не работает
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                         data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Основных причин, по которым соединение может не работать, не так много. Вот самые
+                                распространённые случаи по порядку:</p>
+
+                            <p>1. Закончился оплаченный период использования подписки. Чтобы проверить, активна ли
+                                подписка,
+                                нажмите в меню бота кнопку "Статус".</p>
+
+                            <p>2. Подписка закончилась, после чего вы её оплатили, но ничего не работает.
+                                <a href="https://cazvpn.online/after_payment">Подробная инструкция на этот
+                                    случай.</a>
+                            </p>
+
+                            <p>3. Если срок действия подписки не истёк, но соединения с интернетом при включённом
+                                VPN
+                                нет.</p>
+                            <p>3.1 В первую очередь необходимо проверить, включено ли автоматическое обновление
+                                подписки.
+                                <a href="https://cazvpn.online/auto_upd"> Инструкция по автообновлению</a>
+                            </p>
+                            <p>3.2 Попробовать обновить подписку вручную: <a href="#">Инструкция по ручному
+                                обновлению</a>.
+                            </p>
+
+                            <p>4. Классический вариант, когда ничего не работает 😊 Удалите приложение, зайдите в бот
+                                и
+                                переустановите приложение и подписку. Сделать это можно всего в два клика!</p>
+
+                            <p>5. Если ничего не помогло или не хочется читать инструкции – просто <a
+                                    href="https://t.me/PorokhovS">напишите в поддержку в боте.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                            Автоматическое обновление подписки
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                         data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <a href="https://cazvpn.online/auto_upd">Подробная инструкция</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                            Не работает WhatsApp/Instagram при включенном VPN на iOs
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                         data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>В приложении Streisand необходимо перейти в настройки, далее выбрать в меню
+                                "туннель",
+                                нажать
+                                IPSettings и в выпадающем списке выбрать IPv4.</p>
+                            <div class="row">
+                                <img src="/static/met_1.png" class="img-fluid" style="max-width: 50%; height: 50%;">
+                                <img src="/static/met_2.png" class="img-fluid" style="max-width: 50%; height: 50%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://t.me/PorokhovS" class="btn btn-primary rounded-pill w-100 my-5" role="button">Написать
+                в
+                поддержку</a>
+
+        </div>
+
+
+    </div>
+
+<!-- Блок оплаты -->
+
+    <div id="payment" class="content">
+        <h1>Оплата</h1>
+        <p>Здесь вы можете произвести оплату.</p>
+
+
+
+    </div>
+
+<!-- Блок рефералки -->
+    <div id="refer" class="content">
+        <h1>Реферальная система</h1>
+        <p>Приглашайте друзей и получайте подарочные дни использования сервиса за каждое продление подписки
+            друзьями!
+            🎁</p>
+
+        <p>Когда друг оплатит свою подписку, вам автоматически начислятся дополнительные дни подписки:
+        <p>
+
+        <p>1 месяц: +10 дней</p>
+        <p>3 месяца: +20 дней</p>
+        <p>6 месяцев: +31 день</p>
+        <p>1 год: +63 дня</p>
+
+        <div class="row">
+            <a href="" class="btn btn-primary rounded-pill w-100 my-4 shadow-lg">Пригласить друга
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
